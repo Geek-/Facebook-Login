@@ -1,7 +1,7 @@
 <?php
 ob_start();
 session_start();
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php'; //Set path as needed. Download the facebook php sdk
 $fb = new Facebook\Facebook([
   'app_id' => 'XXXXXXXXXXX', // Your app id
   'app_secret' => 'XXXXXXXXXXXXXX', // Your app secret
