@@ -1,11 +1,12 @@
 <?php
 ob_start();
 session_start();
-require_once __DIR__ . '/src/Facebook/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 $fb = new Facebook\Facebook([
-  'app_id' => '757964754360580',
-  'app_secret' => '0e01c0a241e8f173f701f9d57939a866',
-  'default_graph_version' => 'v2.8',
+  'app_id' => 'XXXXXXXXXXX', // Your app id
+  'app_secret' => 'XXXXXXXXXXXXXX', // Your app secret
+  'default_graph_version' => 'v3.1',
+  'default_access_token' => isset($_SESSION['facebook_access_token']) ? $_SESSION['facebook_access_token'] : 'APP-ID|APP-SECRET'
   ]);
   
 $redirect = 'http://iedu-eg.com/facebook/';
